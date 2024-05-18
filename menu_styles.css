@@ -1,25 +1,30 @@
+/* General Styles */
 body {
     color: white;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #121212;
     scroll-behavior: smooth;
+    border-radius: 1vh;
 }
 
+/* Header Styles */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background-color: #121212;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);    position: fixed;
+    top: 0; /* Fix the header at the top */
+    z-index: 1000; /* Ensure header stays above other content */
 }
 
+/* Logo Styles */
 #logo {
     display: flex;
     border-radius: 1vh;
     width: 95%;
-    height: 19vh;
     background-color: rgb(38, 34, 34);
     align-items: center;
     justify-content: center;
@@ -31,23 +36,24 @@ header {
     margin: 0;
 }
 
+/* Navbar Styles */
 .navbar {
     width: 95%;
-    height: auto;
     background-color: rgb(38, 34, 34);
-    overflow-x: auto; 
-    white-space: nowrap; 
+    overflow-x: auto;
+    white-space: nowrap;
     margin-top: 1vh;
+    border-radius: 1vh;
 }
 
 .navbar ul {
     list-style-type: none;
-    display: flex; 
+    display: flex;
     padding: 0;
 }
 
 .navbar li {
-    display: inline; 
+    display: inline;
 }
 
 .navbar a {
@@ -62,6 +68,7 @@ header {
     background-color: #575757;
 }
 
+/* Main Content Styles */
 main {
     display: flex;
     flex-direction: column;
@@ -69,9 +76,11 @@ main {
     width: 100%;
     background-color: #121212;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 27vh; /* Adjust based on navbar height */
 }
 
-article{
+/* Article Styles */
+article {
     display: flex;
     flex-wrap: wrap;
     border-radius: 1vh;
@@ -82,39 +91,36 @@ article{
     box-sizing: border-box;
     color: rgb(254, 254, 254);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin: 0;
     margin-top: 1vh;
-    font-size:smaller;
+    font-size: smaller;
     padding: 10px;
-    
 }
 
-
 article h2 {
-    width: 100%; 
+    width: 100%;
     justify-content: center;
     margin-bottom: 10px;
     text-align: center;
 }
 
 article img {
-    flex: 1; 
-    max-width: 200px; 
+    flex: 1;
+    max-width: 200px;
     margin-right: 20px;
     align-items: center;
-
 }
 
 article .text {
-    flex: 2; 
-    max-width: calc(100% - 220px); 
+    flex: 2;
+    max-width: calc(100% - 220px);
 }
 
 article p {
     text-align: justify;
 }
 
-footer{
+/* Footer Styles */
+footer {
     display: flex;
     border-radius: 1vh;
     width: 100%;
@@ -129,4 +135,3 @@ footer{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-top: 1vh;
 }
-
