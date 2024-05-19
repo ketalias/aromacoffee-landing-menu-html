@@ -34,9 +34,7 @@ header {
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+    
 }
 
 /* Logo Styles */
@@ -61,6 +59,8 @@ header {
     white-space: nowrap;
     border: 1px solid var(--border-color);
     height: auto;
+    position: static;
+    
 }
 
 .navbar ul {
@@ -93,8 +93,7 @@ main {
     align-items: center;
     width: 100%;
     background-color: var(--primary-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    margin-top: 23vh; /* Adjust based on navbar height */
+    box-shadow: 0 4px 8px var(--shadow-color)
 }
 
 /* Article Styles */
@@ -139,9 +138,8 @@ article i {
 /* Footer Styles */
 footer {
     width: 100%;
-    height: 10vh;
-    font-size: 9vh;
-    font-family: var(--font-family-logo-footer);
+    height: auto;
+    font-size: 2.5vh;
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
     margin-top: 1vh;
