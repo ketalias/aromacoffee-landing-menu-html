@@ -6,15 +6,16 @@
     --text-color: #fefefe;
     --border-color: #858282;
     --shadow-color: rgba(0, 0, 0, 0.7);
-    --font-family-primary: Georgia, serif;
-    --font-family-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --font-family-logo-footer: Georgia, serif;
+    --font-family-primary: Georgia, sans-serif;
+    --font-family-secondary: Tahoma, serif;
+    --font-family-logo-footer: Georgia, sans-serif;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    
 }
 
 body {
@@ -27,21 +28,22 @@ body {
 }
 
 /* Header Styles */
+/* Header Styles */
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Change to row to align logo and image in one line */
     align-items: center;
+    justify-content: space-evenly; /* Ensure space between logo and other elements */
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
-    
+    padding: 10px; /* Add padding for better spacing */
 }
 
 /* Logo Styles */
 #logo {
     display: flex;
-    width: 99%;
-    align-items: center;
+    align-items: center; /* Center align items within the flex container */
     justify-content: center;
     box-sizing: border-box;
     font-size: 8vh;
@@ -49,8 +51,15 @@ header {
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
     margin: 0;
-    border: 1px solid var(--border-color);
 }
+
+header img {
+    width: 14vh; /* Adjust height to match the text size */
+    height: 11vh;
+    left: 0;
+
+}
+
 
 /* Navbar Styles */
 .navbar {
@@ -60,6 +69,8 @@ header {
     border: 1px solid var(--border-color);
     height: auto;
     position: static;
+    border-left: none;
+    border-right: none;
     
 }
 
@@ -102,12 +113,15 @@ main {
 article {
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 100%;
     padding: 10px;
-    border: 1px solid var(--border-color);
+    border: 0.3px solid var(--border-color);
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
     font-weight: bold;
+    border-left: none;
+    border-right: none;
+
 
     
 }
@@ -133,7 +147,7 @@ article i {
 .category {
     display: flex;
     background-color: #272829;
-    width: 95%;
+    width: 100%;
     font-size: 5vh;
     padding: 1vh;
     margin-bottom: 1vh;
@@ -151,4 +165,11 @@ footer {
     margin-top: 1vh;
     bottom: 0;
     border: 1px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+}
+
+footer a {
+    background-color: var(--secondary-color);
+    color: #57CC99;
 }
