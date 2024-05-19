@@ -6,9 +6,9 @@
     --text-color: #fefefe;
     --border-color: #858282;
     --shadow-color: rgba(0, 0, 0, 0.7);
-    --font-family-primary: Arial, sans-serif;
+    --font-family-primary: Georgia, serif;
     --font-family-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --font-family-logo-footer: "Brush Script MT", cursive;
+    --font-family-logo-footer: Georgia, serif;
 }
 
 *,
@@ -44,7 +44,7 @@ header {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    font-size: 9vh;
+    font-size: 8vh;
     font-family: var(--font-family-logo-footer);
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
@@ -80,10 +80,12 @@ header {
     text-align: center;
     padding: 10px 19px;
     text-decoration: none;
+    font-size: large;
 }
 
 .navbar a:hover {
     background-color: var(--secondary-color);
+    color: #57CC99;
 }
 
 /* Main Content Styles */
@@ -105,7 +107,9 @@ article {
     border: 1px solid var(--border-color);
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
-    justify-content: flex-start;
+    font-weight: bold;
+
+    
 }
 
 .item {
@@ -114,7 +118,9 @@ article {
 
 .money {
     font-size: 2.3vh;
+    color: #57CC99;
 }
+
 
 article i {
     font-size: 1.9vh;
