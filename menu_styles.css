@@ -1,9 +1,27 @@
 /* General Styles */
+:root {
+    --primary-color: #121212;
+    --secondary-color: #575757;
+    --highlight-color: #bbb6b6;
+    --text-color: #fefefe;
+    --border-color: #858282;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --font-family-primary: Arial, sans-serif;
+    --font-family-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-family-logo-footer: "Brush Script MT", cursive;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    color: white;
+    color: var(--text-color);
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
+    font-family: var(--font-family-primary);
+    background-color: var(--primary-color);
     scroll-behavior: smooth;
     border-radius: 1vh;
 }
@@ -14,42 +32,42 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #121212;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);    position: fixed;
-    top: 0; /* Fix the header at the top */
-    z-index: 1000; /* Ensure header stays above other content */
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Logo Styles */
 #logo {
     display: flex;
-    border-radius: 1vh;
-    width: 95%;
-    background-color: rgb(38, 34, 34);
+    width: 99%;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     font-size: 9vh;
-    font-family: "Brush Script MT", cursive;
-    color: rgb(254, 254, 254);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: var(--font-family-logo-footer);
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px var(--shadow-color);
     margin: 0;
+    border: 1px solid var(--border-color);
 }
 
 /* Navbar Styles */
 .navbar {
-    width: 95%;
-    background-color: rgb(38, 34, 34);
+    width: 99%;
     overflow-x: auto;
     white-space: nowrap;
-    margin-top: 1vh;
-    border-radius: 1vh;
+    border: 1px solid var(--border-color);
+    height: auto;
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
     padding: 0;
+    height: auto;
 }
 
 .navbar li {
@@ -58,14 +76,14 @@ header {
 
 .navbar a {
     display: block;
-    color: white;
+    color: var(--text-color);
     text-align: center;
     padding: 10px 19px;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    background-color: #575757;
+    background-color: var(--secondary-color);
 }
 
 /* Main Content Styles */
@@ -74,64 +92,59 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #121212;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 27vh; /* Adjust based on navbar height */
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin-top: 23vh; /* Adjust based on navbar height */
 }
 
 /* Article Styles */
 article {
     display: flex;
-    flex-wrap: wrap;
-    border-radius: 1vh;
+    flex-direction: row;
     width: 95%;
-    height: 44vh;
-    background-color: rgb(38, 34, 34);
-    align-items: center;
-    box-sizing: border-box;
-    color: rgb(254, 254, 254);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-top: 1vh;
-    font-size: smaller;
     padding: 10px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    justify-content: flex-start;
 }
 
-article h2 {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 10px;
-    text-align: center;
+.item {
+    font-size: 2.8vh;
 }
 
-article img {
-    flex: 1;
-    max-width: 200px;
-    margin-right: 20px;
-    align-items: center;
+.money {
+    font-size: 2.3vh;
 }
 
-article .text {
-    flex: 2;
-    max-width: calc(100% - 220px);
+article i {
+    font-size: 1.9vh;
+    color: var(--highlight-color);
+    align-items: end;
+    align-content: end;
 }
 
-article p {
-    text-align: justify;
+/* Category Styles */
+.category {
+    display: flex;
+    background-color: #272829;
+    width: 95%;
+    font-size: 5vh;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    font-family: var(--font-family-secondary);
 }
 
 /* Footer Styles */
 footer {
-    display: flex;
-    border-radius: 1vh;
     width: 100%;
     height: 10vh;
-    background-color: rgb(38, 34, 34);
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
     font-size: 9vh;
-    font-family: "Brush Script MT", cursive;
-    color: rgb(254, 254, 254);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: var(--font-family-logo-footer);
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px var(--shadow-color);
     margin-top: 1vh;
+    bottom: 0;
+    border: 1px solid var(--border-color);
 }
