@@ -31,58 +31,79 @@ body {
 /* Header Styles */
 header {
     display: flex;
-    flex-direction: row; /* Change to row to align logo and image in one line */
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly; /* Ensure space between logo and other elements */
+    justify-content: space-evenly;
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
-    padding: 10px; /* Add padding for better spacing */
+    padding: 10px;
+    position: relative; /* Ensure the header content is positioned correctly */
+    z-index: 1001; /* Ensure it is above the navbar */
+}
+.shapka{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 10px;
+
 }
 
 /* Logo Styles */
 #logo {
     display: flex;
-    align-items: center; /* Center align items within the flex container */
+    align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    font-size: 8vh;
+    font-size: 6.7vh;
     font-family: var(--font-family-logo-footer);
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
     margin: 0;
 }
 
-header img {
-    width: 14vh; /* Adjust height to match the text size */
-    height: 11vh;
-    left: 0;
-
+#logoimg {
+    width: 14vh;
+    height: auto;
+    margin-right: 3vh; /* Add some space between the image and the logo text */
 }
-
 
 /* Navbar Styles */
 .navbar {
-    width: 99%;
+    width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     border: 1px solid var(--border-color);
-    height: auto;
-    position: static;
+    height: 7vh;
     border-left: none;
     border-right: none;
-    
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px var(--shadow-color); /* Add shadow for visual separation */
+
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
     padding: 0;
-    height: auto;
+    margin: 0;
+    height: 100%; /* Ensure the list items take the full height of the navbar */
+    align-items: center;
 }
 
 .navbar li {
-    display: inline;
+    display: inline-flex; /* Use inline-flex for better alignment */
+    border: 1px solid #57CC99;
+    border-radius: 2vh;
+    margin-right: 1vh;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
 }
 
 .navbar a {
@@ -92,11 +113,26 @@ header img {
     padding: 10px 19px;
     text-decoration: none;
     font-size: large;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1); /* Scale the underline to full width */
+    transform-origin: bottom left; /* End animation at the left */
 }
 
 .navbar a:hover {
-    background-color: var(--secondary-color);
     color: #57CC99;
+    animation: colorChange 0.3s forwards; /* Animation on hover */
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--text-color);
+    }
+    100% {
+        color: #57CC99;
+    }
 }
 
 /* Main Content Styles */
@@ -106,7 +142,8 @@ main {
     align-items: center;
     width: 100%;
     background-color: var(--primary-color);
-    box-shadow: 0 4px 8px var(--shadow-color)
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin-top: 6vh;
 }
 
 /* Article Styles */
@@ -121,9 +158,12 @@ article {
     font-weight: bold;
     border-left: none;
     border-right: none;
+}
 
+article img{
+    width: 30vh;
+    border: 1vh solid #272829;
 
-    
 }
 
 .item {
@@ -170,7 +210,6 @@ footer {
 }
 
 footer a {
-    background-color: var(--secondary-color);
     color: #57CC99;
 }
 
