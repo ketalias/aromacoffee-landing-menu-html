@@ -173,3 +173,13 @@ footer a {
     background-color: var(--secondary-color);
     color: #57CC99;
 }
+
+/*©fotter - відредагуй правильно*/
+.ident {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #272829;
+    
+}
