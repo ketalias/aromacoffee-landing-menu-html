@@ -40,6 +40,7 @@ header {
     padding: 10px;
     position: relative; /* Ensure the header content is positioned correctly */
     z-index: 1001; /* Ensure it is above the navbar */
+    
 }
 .shapka{
     display: flex;
