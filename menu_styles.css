@@ -2,7 +2,7 @@
 :root {
     --primary-color: #121212;
     --secondary-color: #575757;
-    --highlight-color: #bbb6b6;
+    --highlight-color: #777474;
     --text-color: #fefefe;
     --border-color: #858282;
     --shadow-color: rgba(0, 0, 0, 0.7);
@@ -75,9 +75,10 @@ header {
 /* Navbar Styles */
 .navbar {
     width: 100%;
+    margin-top:2px;
     overflow-x: auto;
     white-space: nowrap;
-    border: 1px solid var(--border-color);
+    /*border: 1px solid var(--border-color);*/
     height: 7vh;
     border-left: none;
     border-right: none;
@@ -100,8 +101,10 @@ header {
 
 .navbar li {
     display: inline-flex; /* Use inline-flex for better alignment */
-    border: 1px solid #57CC99;
+    font-weight: bold;
+    border: 3px solid #57CC99;
     border-radius: 2vh;
+    background-color: var(--primary-color);
     margin-right: 1vh;
     justify-content: center;
     align-items: center; /* Center the content vertically */
