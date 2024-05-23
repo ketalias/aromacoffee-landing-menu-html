@@ -23,8 +23,9 @@ body {
     margin: 0;
     font-family: var(--font-family-primary);
     background-color: var(--primary-color);
-    scroll-behavior: smooth;
     border-radius: 1vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 /* Header Styles */
@@ -74,6 +75,7 @@ header {
 
 /* Navbar Styles */
 .navbar {
+    display: block;
     width: 100%;
     margin-top:2px;
     overflow-x: auto;
@@ -130,25 +132,20 @@ header {
     animation: colorChange 0.3s forwards; /* Animation on hover */
 }
 
-@keyframes colorChange {
-    0% {
-        color: var(--text-color);
-    }
-    100% {
-        color: #57CC99;
-    }
-}
 
 /* Main Content Styles */
 main {
-    display: flex;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: block;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
     margin-top: 6vh;
+
 }
+
+
 
 /* Article Styles */
 article {
@@ -226,3 +223,13 @@ footer a {
     background-color: #272829;
     
 }
+
+@keyframes colorChange {
+    0% {
+        color: var(--text-color);
+    }
+    100% {
+        color: #57CC99;
+    }
+}
+
