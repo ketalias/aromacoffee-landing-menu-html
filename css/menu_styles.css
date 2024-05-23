@@ -46,16 +46,19 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: auto;
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
     padding: 3vh;
+    
 }
 
 /* Logo Styles */
 #logo {
     display: flex;
     align-items: center;
+    height: auto;
     justify-content: center;
     box-sizing: border-box;
     font-size: 6.7vh;
