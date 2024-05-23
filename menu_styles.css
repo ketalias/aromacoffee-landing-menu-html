@@ -38,7 +38,6 @@ header {
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
-    padding: 10px;
     position: relative; /* Ensure the header content is positioned correctly */
     z-index: 1001; /* Ensure it is above the navbar */
     
@@ -50,8 +49,7 @@ header {
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
-    padding: 10px;
-
+    padding: 3vh;
 }
 
 /* Logo Styles */
@@ -202,30 +200,36 @@ article i {
 
 /* Footer Styles */
 footer {
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
     font-size: 2.5vh;
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
     margin-top: 1vh;
-    bottom: 0;
-    border: 1px solid var(--border-color);
+    border: 0.3px solid var(--border-color);
     border-left: none;
     border-right: none;
 }
 
 footer a {
-    color: #57CC99;
+    color: #57CC99;          /* Sets the text color of links in the footer */
+    text-decoration: none;   /* Removes the underline from links */
+    transition: color 0.3s;  /* Adds a smooth transition effect on hover */
+    font-style: oblique;
 }
+
+footer a:hover {
+    color: #3FA16C;          /* Changes the text color on hover */
+    text-decoration: underline; /* Adds an underline on hover */
+}
+
 
 /*©fotter - відредагуй правильно*/
 .ident {
     display: flex;
     flex-direction: row; 
-    align-items: center;
     justify-content: space-evenly;
     background-color: #272829;
-    
 }
 
 @keyframes colorChange {
