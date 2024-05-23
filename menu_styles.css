@@ -139,10 +139,14 @@ main {
     scroll-behavior: smooth;
     display: block;
     flex-direction: column;
+    overflow-y: scroll; /* забезпечує прокрутку по вертикалі */
+    scroll-behavior: smooth; /* забезпечує плавну прокрутку */
+    align-items: center;
+    width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
     margin-top: 6vh;
-
+    height: calc(100vh - 6vh); /* Висота main повинна бути динамічною */
 }
 
 
