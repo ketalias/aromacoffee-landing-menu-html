@@ -10,11 +10,14 @@
     <script>
         function toggleTheme() {
             const themeStylesheet = document.getElementById('theme-stylesheet');
+            const logotype = document.getElementById('logoimg');
             const currentTheme = themeStylesheet.getAttribute('href');
             if (currentTheme === '/css/light_theme.css') {
                 themeStylesheet.setAttribute('href', '/css/dark_theme.css');
+                logotype.setAttribute('src', '/img/dark_logo.png')
             } else {
                 themeStylesheet.setAttribute('href', '/css/light_theme.css');
+                logotype.setAttribute('src', '/img/light_logo.png');
             }
         }
     </script>
@@ -41,7 +44,7 @@
     <main>
         
         <div class="shapka" id="coffee">
-            <img id="logoimg" src="/img/Дизайн без назви.png">
+            <img id="logoimg" src="/img/dark_logo.png">
             <div id="logo">AROMA CAFFEE</div> 
             <label class="switch">
                 <input type="checkbox" class="theme-toggle-button" onclick="toggleTheme()">
