@@ -1,11 +1,21 @@
 /* General Styles */
 :root {
-    --primary-color: #ffffff; /* Білий */
+    
+    --primary-color: #fef9f0;/* Задній фон сайта*/
     --secondary-color: #d3d3d3; /* Світло-сірий */
-    --highlight-color: #a9a9a9; /* Сірий */
-    --text-color: #000000; /* Чорний */
-    --border-color: #008000; /* Зелений */
-    --shadow-color: rgba(0, 0, 0, 0.2); /* Світлий тіньовий ефект */
+    --highlight-color: #6c6c6c; /* Грами ваги тд тп*/
+    --text-color: #000000; /* Основний текст*/
+    --border-color: #757066; /* Ободочки*/
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Тіньовий ефект тінь */
+    --navbar-borders:#A6705D; /* Контури в навбарі*/
+    --a-hover-color: #A6705D; /* При наводці на навбар колір*/
+    --article-img: #272829;/*Контур на зображеннях*/
+    --money-color: #A6705D;/*Колір цін*/
+    --footer-link: #D9B391;/*Колір ссилки у футері*/
+    --footer-link-backcover-color: #272829;/*Колір ссилки у футері при натисканні*/
+    --ident-background-color: #D9B391;/*В самому низу задній фон*/
+    --ident-text-color: white;/*колір текста в самому низу*/
+    --category-background-color: #D9B391;/*Бекграунд категорій(кава, лимонади тд тп)*/
     --font-family-primary: Georgia, sans-serif;
     --font-family-secondary: Tahoma, serif;
     --font-family-logo-footer: Georgia, sans-serif;
@@ -18,6 +28,9 @@
     
 }
 
+.switch{
+    margin-left: 1%;
+}
 
 body {
     color: var(--text-color);
@@ -77,7 +90,7 @@ header {
 .navbar li {
     display: inline-flex; /* Use inline-flex for better alignment */
     font-weight: bold;
-    border: 3px solid #57CC99;
+    border: 3px solid var(--navbar-borders);
     border-radius: 2vh;
     background-color: var(--primary-color);
     margin-right: 1vh;
@@ -101,7 +114,7 @@ header {
 }
 
 .navbar a:hover {
-    color: #57CC99;
+    color: var(--a-hover-color);
     animation: colorChange 0.3s forwards; /* Animation on hover */
 }
 
@@ -140,7 +153,7 @@ article {
 
 article img{
     width: 30vh;
-    border: 1vh solid #272829;
+    border: 1vh solid var(--article-img);
 
 }
 
@@ -150,7 +163,7 @@ article img{
 
 .money {
     font-size: 2.3vh;
-    color: #57CC99;
+    color: var(--money-color);
 }
 
 
@@ -164,7 +177,7 @@ article i {
 /* Category Styles */
 .category {
     display: flex;
-    background-color: #272829;
+    background-color: var(--category-background-color);
     width: 100%;
     font-size: 5vh;
     padding: 1vh;
@@ -172,6 +185,8 @@ article i {
     margin-top: 1vh;
     font-family: var(--font-family-secondary);
 }
+
+
 
 /* Footer Styles */
 footer {
@@ -187,14 +202,14 @@ footer {
 }
 
 footer a {
-    color: #57CC99;          /* Sets the text color of links in the footer */
+    color: var(--category-background-color);          /* Sets the text color of links in the footer */
     text-decoration: none;   /* Removes the underline from links */
     transition: color 0.3s;  /* Adds a smooth transition effect on hover */
     font-style: oblique;
 }
 
 footer a:hover {
-    color: #3FA16C;          /* Changes the text color on hover */
+    color: var(--footer-link-backcover-color);          /* Changes the text color on hover */
     text-decoration: underline; /* Adds an underline on hover */
 }
 
@@ -227,7 +242,6 @@ footer a:hover {
     margin: 0vh 0vh 0vh 4vh;
 }
 
-/*Перемикач теми*/
 .switch {
     display: block;
     --width-of-switch: 3.5em;
@@ -252,7 +266,7 @@ footer a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #303136;
+    background-color: #f4f4f5;
     transition: .4s;
     border-radius: 30px;
 }
@@ -263,33 +277,36 @@ footer a:hover {
     height: var(--size-of-icon, 1.4em);
     width: var(--size-of-icon, 1.4em);
     border-radius: 20px;
-    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    left: var(--slider-offset, 0.3em);
     top: 50%;
     transform: translateY(-50%);
-    background: #303136;
-    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: #57CC99;;
+    background-color: #303136;
 }
 
 input:checked + .slider:before {
-    left: var(--slider-offset, 0.3em);
-    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-    box-shadow: inset -3px -2px 5px -2px #ff0080, inset -10px -4px 0 0 #ff8c00 ;
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 
 
 
-/*©fotter - відредагуй правильно*/
 .ident {
     display: flex;
     flex-direction: row; 
     justify-content: space-evenly;
-    background-color: #272829;
+    
+    background-color: var(--ident-background-color);
+}
+
+.ident p {
+    color: var(--ident-text-color);
 }
 
 @keyframes colorChange {
@@ -297,7 +314,7 @@ input:checked + .slider:before {
         color: var(--text-color);
     }
     100% {
-        color: #57CC99;
+        color: var(--a-hover-color);
     }
 }
 
