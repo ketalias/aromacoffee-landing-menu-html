@@ -42,37 +42,8 @@ header {
     z-index: 1001; /* Ensure it is above the navbar */
     
 }
-.shapka{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    background-color: var(--primary-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    padding: 3vh;
-    
-}
 
-/* Logo Styles */
-#logo {
-    display: flex;
-    align-items: center;
-    height: auto;
-    justify-content: center;
-    box-sizing: border-box;
-    font-size: 6.7vh;
-    font-family: var(--font-family-logo-footer);
-    color: var(--text-color);
-    text-shadow: 2px 2px 4px var(--shadow-color);
-    margin: 0;
-}
 
-#logoimg {
-    width: 14vh;
-    height: auto;
-    margin-right: 3vh; /* Add some space between the image and the logo text */
-}
 
 /* Navbar Styles */
 .navbar {
@@ -225,6 +196,88 @@ footer a:hover {
     color: #3FA16C;          /* Changes the text color on hover */
     text-decoration: underline; /* Adds an underline on hover */
 }
+
+.shapka {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 3vh;
+}
+
+.shapka img {
+    width: 14vh;
+    height: auto;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: var(--font-family-logo-footer);
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    margin: 0vh 0vh 0vh 4vh;
+}
+
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    --size-of-icon: 1.4em;
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #303136;
+}
+
+input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
 
 
 /*©fotter - відредагуй правильно*/

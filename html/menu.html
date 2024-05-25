@@ -4,13 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/menu_styles.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="/css/dark_theme.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Menu</title>
+    <script>
+        function toggleTheme() {
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            const currentTheme = themeStylesheet.getAttribute('href');
+            if (currentTheme === '/css/light_theme.css') {
+                themeStylesheet.setAttribute('href', '/css/dark_theme.css');
+            } else {
+                themeStylesheet.setAttribute('href', '/css/light_theme.css');
+            }
+        }
+    </script>
 
 </head>
-
-
 
 
 <body>
@@ -30,12 +39,16 @@
 
 
     <main>
+        
         <div class="shapka" id="coffee">
             <img id="logoimg" src="/img/Дизайн без назви.png">
-            <div id="logo">AROMA CAFFEE</div>
+            <div id="logo">AROMA CAFFEE</div> 
+            <label class="switch">
+                <input type="checkbox" class="theme-toggle-button" onclick="toggleTheme()">
+                <span class="slider"></span>
+            </label>
+            
         </div>
-
-        
             <!--Кава-->
             <div class="category"><b>Кава</b></div>
             <article>
