@@ -1,19 +1,33 @@
 /* General Styles */
 :root {
-    --primary-color: #121212;/* Задній фон сайта*/
-    --secondary-color: #575757;/* Світло-сірий */
-    --highlight-color: #777474;/* Грами ваги тд тп*/
-    --text-color: #fefefe;/* Основний текст*/
-    --border-color: #858282;/* Ободочки*/
-    --shadow-color: rgba(250, 234, 234, 0.2); /* Тіньовий ефект тінь */
-    --navbar-borders:#57CC99; /* Контури в навбарі*/
-    --a-hover-color: #57CC99; /* При наводці на навбар колір*/
-    --article-img: #272829;/*Контур на зображеннях*/
-    --money-color: #57CC99;/*Колір цін*/
-    --footer-link: #57CC99;/*Колір ссилки у футері*/
-    --footer-link-backcover-color: #3FA16C;/*Колір ссилки у футері при натисканні*/
-    --ident-background-color: #272829;/*В самому низу задній фон*/
-    --category-background-color: #272829;/*Бекграунд категорій(кава, лимонади тд тп)*/
+    --primary-color: #121212;
+    /* Задній фон сайта*/
+    --secondary-color: #575757;
+    /* Світло-сірий */
+    --highlight-color: #777474;
+    /* Грами ваги тд тп*/
+    --text-color: #fefefe;
+    /* Основний текст*/
+    --border-color: #858282;
+    /* Ободочки*/
+    --shadow-color: rgba(250, 234, 234, 0.2);
+    /* Тіньовий ефект тінь */
+    --navbar-borders: #57CC99;
+    /* Контури в навбарі*/
+    --a-hover-color: #57CC99;
+    /* При наводці на навбар колір*/
+    --article-img: #272829;
+    /*Контур на зображеннях*/
+    --money-color: #57CC99;
+    /*Колір цін*/
+    --footer-link: #57CC99;
+    /*Колір ссилки у футері*/
+    --footer-link-backcover-color: #3FA16C;
+    /*Колір ссилки у футері при натисканні*/
+    --ident-background-color: #272829;
+    /*В самому низу задній фон*/
+    --category-background-color: #272829;
+    /*Бекграунд категорій(кава, лимонади тд тп)*/
     --shadow-color: rgba(0, 0, 0, 0.7);
     --font-family-primary: Georgia, sans-serif;
     --font-family-secondary: Tahoma, serif;
@@ -24,10 +38,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    
+
 }
 
-.switch{
+.switch {
     margin-left: 1%;
 }
 
@@ -42,7 +56,6 @@ body {
 }
 
 /* Header Styles */
-/* Header Styles */
 header {
     display: flex;
     flex-direction: row;
@@ -51,9 +64,11 @@ header {
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
-    position: relative; /* Ensure the header content is positioned correctly */
-    z-index: 1001; /* Ensure it is above the navbar */
-    
+    position: relative;
+    /* Ensure the header content is positioned correctly */
+    z-index: 1001;
+    /* Ensure it is above the navbar */
+
 }
 
 
@@ -62,7 +77,7 @@ header {
 .navbar {
     display: block;
     width: 100%;
-    margin-top:2px;
+    margin-top: 2px;
     overflow-x: auto;
     white-space: nowrap;
     /*border: 1px solid var(--border-color);*/
@@ -73,7 +88,8 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px var(--shadow-color); /* Add shadow for visual separation */
+    box-shadow: 0 2px 4px var(--shadow-color);
+    /* Add shadow for visual separation */
 
 }
 
@@ -82,19 +98,22 @@ header {
     display: flex;
     padding: 0;
     margin: 0;
-    height: 100%; /* Ensure the list items take the full height of the navbar */
+    height: 100%;
+    /* Ensure the list items take the full height of the navbar */
     align-items: center;
 }
 
 .navbar li {
-    display: inline-flex; /* Use inline-flex for better alignment */
+    display: inline-flex;
+    /* Use inline-flex for better alignment */
     font-weight: bold;
     border: 3px solid var(--navbar-borders);
     border-radius: 2vh;
     background-color: var(--primary-color);
     margin-right: 1vh;
     justify-content: center;
-    align-items: center; /* Center the content vertically */
+    align-items: center;
+    /* Center the content vertically */
 }
 
 .navbar a {
@@ -108,13 +127,16 @@ header {
 }
 
 .navbar a:hover::before {
-    transform: scaleX(1); /* Scale the underline to full width */
-    transform-origin: bottom left; /* End animation at the left */
+    transform: scaleX(1);
+    /* Scale the underline to full width */
+    transform-origin: bottom left;
+    /* End animation at the left */
 }
 
 .navbar a:hover {
     color: var(--a-hover-color);
-    animation: colorChange 0.3s forwards; /* Animation on hover */
+    animation: colorChange 0.3s forwards;
+    /* Animation on hover */
 }
 
 
@@ -124,14 +146,17 @@ main {
     scroll-behavior: smooth;
     display: block;
     flex-direction: column;
-    overflow-y: scroll; /* забезпечує прокрутку по вертикалі */
-    scroll-behavior: smooth; /* забезпечує плавну прокрутку */
+    overflow-y: scroll;
+    /* забезпечує прокрутку по вертикалі */
+    scroll-behavior: smooth;
+    /* забезпечує плавну прокрутку */
     align-items: center;
     width: 100%;
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px var(--shadow-color);
     margin-top: 6vh;
-    height: calc(100vh - 6vh); /* Висота main повинна бути динамічною */
+    height: calc(100vh - 6vh);
+    /* Висота main повинна бути динамічною */
 }
 
 
@@ -150,7 +175,7 @@ article {
     border-right: none;
 }
 
-article img{
+article img {
     width: 30vh;
     border: 1vh solid var(--article-img);
 
@@ -199,15 +224,20 @@ footer {
 }
 
 footer a {
-    color: var(--footer-link);          /* Sets the text color of links in the footer */
-    text-decoration: none;   /* Removes the underline from links */
-    transition: color 0.3s;  /* Adds a smooth transition effect on hover */
+    color: var(--footer-link);
+    /* Sets the text color of links in the footer */
+    text-decoration: none;
+    /* Removes the underline from links */
+    transition: color 0.3s;
+    /* Adds a smooth transition effect on hover */
     font-style: oblique;
 }
 
 footer a:hover {
-    color: var(--footer-link-backcover-color);          /* Changes the text color on hover */
-    text-decoration: underline; /* Adds an underline on hover */
+    color: var(--footer-link-backcover-color);
+    /* Changes the text color on hover */
+    text-decoration: underline;
+    /* Adds an underline on hover */
 }
 
 .shapka {
@@ -282,11 +312,11 @@ footer a:hover {
     transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #f4f4f5;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     left: var(--slider-offset, 0.3em);
     background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
     box-shadow: inset -3px -2px 5px -2px #ff0080, inset -10px -4px 0 0 #ff8c00;
@@ -298,7 +328,7 @@ input:checked + .slider:before {
 /*©fotter - відредагуй правильно*/
 .ident {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-evenly;
     background-color: var(--ident-background-color);
 }
@@ -307,8 +337,8 @@ input:checked + .slider:before {
     0% {
         color: var(--text-color);
     }
+
     100% {
         color: #57CC99;
     }
 }
-

@@ -21,13 +21,12 @@
             }
         }
     </script>
-
 </head>
 
 
 <body>
     <header>
-        <!--Головна менюшка-->
+        <!--Панель навігації-->
         <nav class="navbar">
             <ul>
                 <li><a href="#coffee">Coffee</a></li>
@@ -38,170 +37,171 @@
             </ul>
         </nav>
     </header>
-    
+
 
 
     <main>
-        
+        <!--Шапка сайту-->
         <div class="shapka" id="coffee">
             <img id="logoimg" src="/img/dark_logo.png">
-            <div id="logo">AROMA CAFFEE</div> 
+            <div id="logo">AROMA CAFFEE</div>
             <label class="switch">
                 <input type="checkbox" class="theme-toggle-button" onclick="toggleTheme()">
                 <span class="slider"></span>
             </label>
-            
+
         </div>
-            <!--Кава-->
-            <div class="category"><b>Кава</b></div>
-            <article>
-                <div class="text">
-                    <p class="item">Капучино</p>
-                    <p class="money">42 UAH</p>
-                    <i class="material-icons">balance</i> <i>100г</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Латешка</p>
-                    <p class="money">60 UAH</p>
-                    <i class="material-icons">balance</i> <i>200г</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Еспрессо</p>
-                    <p class="money">30 UAH</p>
-                    <i class="material-icons">balance</i> <i>30г</i>
-                </div>
-            </article>
-            <article id="tea">
-                <div class="text">
-                    <p class="item">Бабл ті</p>
-                    <p class="money">100 UAH</p>
-                    <i class="material-icons">balance</i> <i>300 гр</i>
-                </div>
-            </article>
+        <!--Кава-->
+        <div class="category"><b>Кава</b></div>
+        <article>
+            <div class="text">
+                <p class="item">Капучино</p>
+                <p class="money">42 UAH</p>
+                <i class="material-icons">balance</i> <i>100г</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Латешка</p>
+                <p class="money">60 UAH</p>
+                <i class="material-icons">balance</i> <i>200г</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Еспрессо</p>
+                <p class="money">30 UAH</p>
+                <i class="material-icons">balance</i> <i>30г</i>
+            </div>
+        </article>
+        <article id="tea">
+            <div class="text">
+                <p class="item">Бабл ті</p>
+                <p class="money">100 UAH</p>
+                <i class="material-icons">balance</i> <i>300 гр</i>
+            </div>
+        </article>
 
-            <!--Чаї-->
-            <div class="category"><b>Чай</b></div>
-            <article>
-                <div class="text">
-                    <p class="item">Чорний чай</p>
-                    <p class="money">45 UAH</p>
-                    <i class="material-icons">balance</i> <i>90 гр</i>
-                </div>
-            </article>
-            <article id="lemonade">
-                <div class="text">
-                    <p class="item">Зелений</p>
-                    <p class="money">45 UAH</p>
-                    <i class="material-icons">balance</i> <i>90 гр</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Малиновий</p>
-                    <p class="money">50 UAH</p>
-                    <i class="material-icons">balance</i> <i>90 гр</i>
-                </div>
-            </article>
+        <!--Чаї-->
+        <div class="category"><b>Чай</b></div>
+        <article>
+            <div class="text">
+                <p class="item">Чорний чай</p>
+                <p class="money">45 UAH</p>
+                <i class="material-icons">balance</i> <i>90 гр</i>
+            </div>
+        </article>
+        <article id="lemonade">
+            <div class="text">
+                <p class="item">Зелений</p>
+                <p class="money">45 UAH</p>
+                <i class="material-icons">balance</i> <i>90 гр</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Малиновий</p>
+                <p class="money">50 UAH</p>
+                <i class="material-icons">balance</i> <i>90 гр</i>
+            </div>
+        </article>
 
-            <!--Лимонади-->
-            <div class="category"><b>Лимонади</b></div>
-            <article>
-                <div class="text">
-                    <p class="item">Мохіто</p>
-                    <i class="description">Склад: свіжа м'ята, лайм, спрайт, лід, тростинний цукор</i>
-                    <p class="money">80 UAH</p>
-                    <i class="material-icons">balance</i> <i>350 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Цитрусовий</p>
-                    <i class="description">Склад: вода, цукор, лимони, апельсини, лайми, м'ята, лід.</i>
-                    <p class="money">80 UAH</p>
-                    <i class="material-icons">balance</i> <i>350 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Обліпиха-Малина</p>
-                    <i class="description">Склад: вода, цукор, обліпиха, малина, лимонний сік, м'ята, лід.</i>
-                    <p class="money">87 UAH</p>
-                    <i class="material-icons">balance</i> <i>350 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text" id="cakes">
-                    <p class="item">Ананасовий</p>
-                    <i class="description">Склад: вода, цукор, ананасовий сік, лимонний сік, м'ята, лід</i>
-                    <p class="money">80 UAH</p>
-                    <i class="material-icons">balance</i> <i>350 мл</i>
-                </div>
-            </article>
+        <!--Лимонади-->
+        <div class="category"><b>Лимонади</b></div>
+        <article>
+            <div class="text">
+                <p class="item">Мохіто</p>
+                <i class="description">Склад: свіжа м'ята, лайм, спрайт, лід, тростинний цукор</i>
+                <p class="money">80 UAH</p>
+                <i class="material-icons">balance</i> <i>350 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Цитрусовий</p>
+                <i class="description">Склад: вода, цукор, лимони, апельсини, лайми, м'ята, лід.</i>
+                <p class="money">80 UAH</p>
+                <i class="material-icons">balance</i> <i>350 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Обліпиха-Малина</p>
+                <i class="description">Склад: вода, цукор, обліпиха, малина, лимонний сік, м'ята, лід.</i>
+                <p class="money">87 UAH</p>
+                <i class="material-icons">balance</i> <i>350 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text" id="cakes">
+                <p class="item">Ананасовий</p>
+                <i class="description">Склад: вода, цукор, ананасовий сік, лимонний сік, м'ята, лід</i>
+                <p class="money">80 UAH</p>
+                <i class="material-icons">balance</i> <i>350 мл</i>
+            </div>
+        </article>
 
-            <!--Тістечка-->
-            <div class="category"><b>Тістечка</b></div>
-            <article>
-                <div class="text">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlKY9nIxZeM7ZeVPtBmo6c-8kj8M2Idb9az1Ig7enwwLw172_JmCwU37KESRW5yDUCASk&usqp=CAU"
-                        id="product-img-cakes">
-                    <p class="item">Чорний ліс</p>
-                    <i class="description">Склад: Бісквіт брауні, вишневе компоте, шоколадний мус</i>
-                    <p class="money">115 UAH</p>
-                    <i class="material-icons">balance</i> <i>150 гр</i>
-                </div>
-            </article>
-            <article id="food">
-                <div class="text">
-                    <img src="https://lh3.googleusercontent.com/proxy/C_vWvzz7_WsbwPRgHgdgMcKqf0jAc6-ZPJsgL2KRG1MOxBBcMzx7ZvFIjbdub11FcrTvxGElmgzqAZGYA-gzBrucCVMSBEhsFAsgiT4jaJ4"
-                        id="product-img-cakes">
-                    <p class="item">Нуазет</p>
-                    <i class="description">Склад: Бісквіт з фундуком, хрусткий шар, вершкова карамель, шоколадний крем,
-                        глазур гурме з фундуком, намелака</i>
-                    <p class="money">125 UAH</p>
-                    <i class="material-icons">balance</i> <i>150 гр</i>
-                </div>
-            </article>
+        <!--Тістечка-->
+        <div class="category"><b>Тістечка</b></div>
+        <article>
+            <div class="text">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlKY9nIxZeM7ZeVPtBmo6c-8kj8M2Idb9az1Ig7enwwLw172_JmCwU37KESRW5yDUCASk&usqp=CAU"
+                    id="product-img-cakes">
+                <p class="item">Чорний ліс</p>
+                <i class="description">Склад: Бісквіт брауні, вишневе компоте, шоколадний мус</i>
+                <p class="money">115 UAH</p>
+                <i class="material-icons">balance</i> <i>150 гр</i>
+            </div>
+        </article>
+        <article id="food">
+            <div class="text">
+                <img src="https://lh3.googleusercontent.com/proxy/C_vWvzz7_WsbwPRgHgdgMcKqf0jAc6-ZPJsgL2KRG1MOxBBcMzx7ZvFIjbdub11FcrTvxGElmgzqAZGYA-gzBrucCVMSBEhsFAsgiT4jaJ4"
+                    id="product-img-cakes">
+                <p class="item">Нуазет</p>
+                <i class="description">Склад: Бісквіт з фундуком, хрусткий шар, вершкова карамель, шоколадний крем,
+                    глазур гурме з фундуком, намелака</i>
+                <p class="money">125 UAH</p>
+                <i class="material-icons">balance</i> <i>150 гр</i>
+            </div>
+        </article>
 
-            <!--Їда-->
-            <div class="category"><b>Меню</b></div>
-            <article>
-                <div class="text">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69tO7tzKrU1jfOtibaQRvjhcPf8lnGnIT8ZRCYXFaAA&s"
-                        id="product-img-food">
-                    <p class="item">Сендвіч із беконом</p>
-                    <i class="description">Склад: хліб для тостів, бекон, листя салату, помідори, майонез</i>
-                    <p class="money">95 UAH</p>
-                    <i class="material-icons">balance</i> <i>260 гр</i>
-                </div>
-            </article>
+        <!--Їда-->
+        <div class="category"><b>Меню</b></div>
+        <article>
+            <div class="text">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69tO7tzKrU1jfOtibaQRvjhcPf8lnGnIT8ZRCYXFaAA&s"
+                    id="product-img-food">
+                <p class="item">Сендвіч із беконом</p>
+                <i class="description">Склад: хліб для тостів, бекон, листя салату, помідори, майонез</i>
+                <p class="money">95 UAH</p>
+                <i class="material-icons">balance</i> <i>260 гр</i>
+            </div>
+        </article>
 
-            <footer>
-                <div class="footer-content">
-                    <ul>
-                        <h3>Контактні данні:</h3>
-                        <i>Instagram:</i> <a href="https://www.instagram.com/aroma.cafe.uzh/">@aroma.cafe.uzh</a><br>
-                        <i>Номер телефону:</i>  123-456-7890<br>
-                        <i>Де знаходимся:</i> Православна Набережна, 21А<br><br>
-                    </ul>
-                    <ul>
-                        <h3>Графік роботи:</h3>
-                        Monday - Friday  ||  8:30 - 20:00 <br>
-                        Saturday  ||  9:00 - 20:00 <br>
-                        Sunday  ||  10:00 - 20:00 <br>
-                    </ul>
-                </div>
-        
-                <div class="ident">
-                    <p>© 2024 Aroma Coffe</p>
-                </div>
-            </footer>
-        
+        <!--Футер-->
+        <footer>
+            <div class="footer-content">
+                <ul>
+                    <h3>Контактні данні:</h3>
+                    <i>Instagram:</i> <a href="https://www.instagram.com/aroma.cafe.uzh/">@aroma.cafe.uzh</a><br>
+                    <i>Номер телефону:</i> 123-456-7890<br>
+                    <i>Де знаходимся:</i> Православна Набережна, 21А<br><br>
+                </ul>
+                <ul>
+                    <h3>Графік роботи:</h3>
+                    Monday - Friday || 8:30 - 20:00 <br>
+                    Saturday || 9:00 - 20:00 <br>
+                    Sunday || 10:00 - 20:00 <br>
+                </ul>
+            </div>
+            <!--Авторський знак-->
+            <div class="ident">
+                <p>© 2024 Aroma Coffe</p>
+            </div>
+        </footer>
+
     </main>
-    
+
 </body>
 
 </html>
