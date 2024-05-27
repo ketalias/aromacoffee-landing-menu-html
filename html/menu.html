@@ -9,20 +9,16 @@
     <title>Menu</title>
     <script>
         function toggleTheme() {
-            const themeStylesheet = document.getElementById('theme-stylesheet');
-            const logotype = document.getElementById('logoimg');
+            const themeStylesheet = document.getElementById('theme-stylesheet')
             const currentTheme = themeStylesheet.getAttribute('href');
             if (currentTheme === '/css/light_theme.css') {
                 themeStylesheet.setAttribute('href', '/css/dark_theme.css');
-                logotype.setAttribute('src', '/img/dark_logo.png')
             } else {
                 themeStylesheet.setAttribute('href', '/css/light_theme.css');
-                logotype.setAttribute('src', '/img/light_logo.png');
             }
         }
     </script>
 </head>
-
 
 <body>
     <header>
@@ -37,14 +33,11 @@
             </ul>
         </nav>
     </header>
-
-
-
     <main>
         <!--Шапка сайту-->
         <div class="shapka" id="coffee">
-            <img id="logoimg" src="/img/dark_logo.png">
-            <div id="logo">AROMA CAFFEE</div>
+            <img id="logoimg" src="/img/logotype.png">
+            <div id="logo">AROMA COFFEE</div>
             <label class="switch">
                 <input type="checkbox" class="theme-toggle-button" onclick="toggleTheme()">
                 <span class="slider"></span>
