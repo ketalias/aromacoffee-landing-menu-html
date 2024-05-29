@@ -307,9 +307,6 @@ input:checked + .slider:before {
     box-shadow: inset -3px -2px 5px -2px #ff0080, inset -10px -4px 0 0 #ff8c00;
 }
 
-
-
-
 .ident {
     display: flex;
     flex-direction: row; 
