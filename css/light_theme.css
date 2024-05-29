@@ -1,6 +1,5 @@
 /* General Styles */
 :root {
-
     --primary-color: #f5f5f5;
     /* Світло-сірий фон сайта */
     --secondary-color: #d3d3d3;
@@ -228,7 +227,7 @@ footer {
 }
 
 footer a {
-    color: var(--category-background-color);
+    color: rgb(82, 82, 82);
     /* Sets the text color of links in the footer */
     text-decoration: none;
     /* Removes the underline from links */
