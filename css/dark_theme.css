@@ -158,7 +158,6 @@ article {
     border: 0.3px solid var(--border-color);
     color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
-    font-weight: bold;
     border-left: none;
     border-right: none;
 }
@@ -191,8 +190,8 @@ article i {
     display: flex;
     background-color: var(--category-background-color);
     width: 100%;
-    font-size: 5vh;
-    padding: 1vh;
+    font-size: 4vh;
+    padding: 1.5vh;
     margin-bottom: 1vh;
     margin-top: 1vh;
     font-family: var(--font-family-secondary);
@@ -236,23 +235,18 @@ footer a:hover {
     padding: 3vh;
 }
 
-.shapka img {
-    width: 14vh;
+
+#logoBranch{
+    width: 12vh;
     height: auto;
 }
 
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: var(--font-family-logo-footer);
-    color: var(--text-color);
-    text-shadow: 2px 2px 4px var(--shadow-color);
-    margin: 0vh 0vh 0vh 4vh;
+#logoText{
+    width: 23vh;
+    height: auto;
+    margin: 0vh 2vh 0vh 0vh;
 }
+
 
 .switch {
     display: block;
