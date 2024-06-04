@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="theme-stylesheet" rel="stylesheet" href="/css/dark_theme.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="css/dark_theme.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Menu</title>
     <script>
-        function toggleTheme() {
+
+        window.addEventListener("DOMContentLoaded", (event) =>{
+            document.getElementById('toggleStyle').addEventListener('change', function () {
             const themeStylesheet = document.getElementById('theme-stylesheet');
             const themeBranch = document.getElementById('logoBranch');
             const themeText = document.getElementById('logoText');
@@ -16,17 +18,18 @@
             const currentTheme = themeStylesheet.getAttribute('href');
             const currentImgBranch = themeBranch.getAttribute('src');
             const currentImgText = themeText.getAttribute('src');
-
-            if (currentTheme === '/css/light_theme.css') {
-                themeStylesheet.setAttribute('href', '/css/dark_theme.css');
-                themeBranch.setAttribute('src', '/img/dark_theme_branch.png');
-                themeText.setAttribute('src', '/img/dark_theme_text.png');
+            if (this.checked) {
+                themeStylesheet.setAttribute('href', 'css/light_theme.css');
+                themeBranch.setAttribute('src', 'img/light_theme_branch.png');
+                themeText.setAttribute('src', 'img/light_theme_text.png');
             } else {
-                themeStylesheet.setAttribute('href', '/css/light_theme.css');
-                themeBranch.setAttribute('src', '/img/light_theme_branch.png');
-                themeText.setAttribute('src', '/img/light_theme_text.png');
+                themeStylesheet.setAttribute('href', 'css/dark_theme.css');
+                themeBranch.setAttribute('src', 'img/dark_theme_branch.png');
+                themeText.setAttribute('src', 'img/dark_theme_text.png');
             }
-        }
+        })
+    });
+
     </script>
 
 </head>
@@ -60,10 +63,11 @@
     <main>
 
         <div class="shapka" id="coffee">
-            <img id="logoBranch" src="/img/dark_theme_branch.png">
-            <img id="logoText" src="/img/dark_theme_text.png">
-            <label class="switch">
-                <input type="checkbox" class="theme-toggle-button" onclick="toggleTheme()">
+            <img id="logoBranch" src="img/dark_theme_branch.png">
+            <img id="logoText" src="img/dark_theme_text.png">
+
+            <label for="toggleStyle" class="switch">
+                <input type="checkbox" id="toggleStyle" class="theme-toggle-button">
                 <span class="slider"></span>
             </label>
 
@@ -183,7 +187,7 @@
 
         <!--Фірмові кавові напої-->
 
-            <div class="category"><b>Фірмові кавові напої</b></div>
+        <div class="category"><b>Фірмові кавові напої</b></div>
         <!--
             Без описа
 
@@ -749,102 +753,103 @@
         </article>
 
 
-            <!--Домашні чаї-->
-            <div class="category"><b>Домашні чаї</b></div>
-            <article>
-                <div class="text">
-                    <p class="item">Малиновий</p>
-                    <p class="money">60 UAH</p>
-                    <i class="material-icons">balance</i> <i>400 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Обліпиха – ягода</p>
-                    <p class="money">60 UAH</p>
-                    <i class="material-icons">balance</i> <i>400 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Обліпиха-малина</p>
-                    <p class="money">60 UAH</p>
-                    <i class="material-icons">balance</i> <i>400 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Смородина-маракуя</p>
-                    <p class="money">60 UAH</p>
-                    <i class="material-icons">balance</i> <i>400 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Яблуко-лимон</p>
-                    <p class="money">60 UAH</p>
-                    <i class="material-icons">balance</i> <i>400 мл</i>
-                </div>
-            </article>
-            <article>
-                <div class="text" id="food">
-                    <p class="item">Ягідний бум</p>
-                    <p class="money">65 UAH</p>
-                    <i class="material-icons">balance</i> <i>400 мл</i>
-                </div>
-            </article>
-            
-    
-            <!--Їда-->
-            <div class="category"><b>Меню</b></div>
-            
-            <article>
-                <div class="text">
-                    <p class="item">Сендвіч “Шинка-бекон”</p>
-                    <p class="money">80 UAH</p>
-                    <i class="material-icons">balance</i> <i>260г</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Сендвіч “Сирний”</p>
-                    <p class="money">80 UAH</p>
-                    <i class="material-icons">balance</i> <i>260г</i>
-                </div>
-            </article>
-            <article>
-                <div class="text">
-                    <p class="item">Сирники з ягодами та джемом</p>
-                    <p class="money">85 UAH</p>
-                    <i class="material-icons">balance</i> <i>1 порція</i>
-                </div>
-            </article>
-            <article>
-                <div class="text" id="deserts">
-                    <p class="item">Млинці з творогом та сметаною</p>
-                    <p class="money">85 UAH</p>
-                    <i class="material-icons">balance</i> <i>1 порція</i>
-                </div>
-            </article>
+        <!--Домашні чаї-->
+        <div class="category"><b>Домашні чаї</b></div>
+        <article>
+            <div class="text">
+                <p class="item">Малиновий</p>
+                <p class="money">60 UAH</p>
+                <i class="material-icons">balance</i> <i>400 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Обліпиха – ягода</p>
+                <p class="money">60 UAH</p>
+                <i class="material-icons">balance</i> <i>400 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Обліпиха-малина</p>
+                <p class="money">60 UAH</p>
+                <i class="material-icons">balance</i> <i>400 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Смородина-маракуя</p>
+                <p class="money">60 UAH</p>
+                <i class="material-icons">balance</i> <i>400 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Яблуко-лимон</p>
+                <p class="money">60 UAH</p>
+                <i class="material-icons">balance</i> <i>400 мл</i>
+            </div>
+        </article>
+        <article>
+            <div class="text" id="food">
+                <p class="item">Ягідний бум</p>
+                <p class="money">65 UAH</p>
+                <i class="material-icons">balance</i> <i>400 мл</i>
+            </div>
+        </article>
 
-            <!--Тістечка-->
-            <div class="category"><b>Десерти</b></div>
-            <article>
-                <div class="text">
-                    <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69tO7tzKrU1jfOtibaQRvjhcPf8lnGnIT8ZRCYXFaAA&s"
+
+        <!--Їда-->
+        <div class="category"><b>Меню</b></div>
+
+        <article>
+            <div class="text">
+                <p class="item">Сендвіч “Шинка-бекон”</p>
+                <p class="money">80 UAH</p>
+                <i class="material-icons">balance</i> <i>260г</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Сендвіч “Сирний”</p>
+                <p class="money">80 UAH</p>
+                <i class="material-icons">balance</i> <i>260г</i>
+            </div>
+        </article>
+        <article>
+            <div class="text">
+                <p class="item">Сирники з ягодами та джемом</p>
+                <p class="money">85 UAH</p>
+                <i class="material-icons">balance</i> <i>1 порція</i>
+            </div>
+        </article>
+        <article>
+            <div class="text" id="deserts">
+                <p class="item">Млинці з творогом та сметаною</p>
+                <p class="money">85 UAH</p>
+                <i class="material-icons">balance</i> <i>1 порція</i>
+            </div>
+        </article>
+
+        <!--Тістечка-->
+        <div class="category"><b>Десерти</b></div>
+        <article>
+            <div class="text">
+                <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69tO7tzKrU1jfOtibaQRvjhcPf8lnGnIT8ZRCYXFaAA&s"
                         id="product-img-food">-->
-                    <p class="item">В асортименті</p>
-                    <i class="description">(Уточніть в офіціанта про наявність)</i>
-                </div>
-            </article>
-            
+                <p class="item">В асортименті</p>
+                <i class="description">(Уточніть в офіціанта про наявність)</i>
+            </div>
+        </article>
+
 
         <footer>
             <div class="footer-content">
                 <ul>
                     <h3>Контактні данні:</h3>
                     <i>Instagram:</i> <a href="https://www.instagram.com/aroma.cafe.uzh/">@aroma.cafe.uzh</a><br>
-                    <i>Де знаходимся:</i><address>Православна Набережна, 21А</address><br><br>
+                    <i>Де знаходимся:</i>
+                    <address>Православна Набережна, 21А</address><br><br>
                 </ul>
                 <ul>
                     <h3>Графік роботи:</h3>
